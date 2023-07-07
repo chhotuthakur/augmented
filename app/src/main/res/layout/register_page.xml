@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <?xml version="1.0" encoding="utf-8"?>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/email_layout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_above="@id/pass_layout"
+                app:startIconDrawable="@drawable/baseline_email_24"
+                app:startIconTint="#FFFC0008">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Email Address"
+                    android:id="@+id/edt"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/pass_layout"
+                android:layout_centerInParent="true"
+
+                app:startIconDrawable="@drawable/baseline_key_24"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                app:startIconTint="#FFFC0008">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Password"
+                    android:maxLines="1"
+                    android:id="@+id/pdt"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/name_layout"
+
+                android:layout_below="@id/pass_layout"
+                app:startIconDrawable="@drawable/baseline_manage_accounts_24"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                app:startIconTint="#FFFC0008">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/name"
+                    android:maxLines="1"
+                    android:id="@+id/ndt"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/phone_layout"
+                app:startIconDrawable="@drawable/baseline_key_24"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                app:startIconTint="#FFFC0008"
+                android:layout_below="@id/name_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/phone"
+                    android:maxLines="1"
+                    android:id="@+id/fdt"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/loginbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                tools:layout_editor_absoluteX="165dp"
+                tools:layout_editor_absoluteY="425dp"
+                android:layout_below="@id/phone_layout"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="#FFFC0008"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:fontFamily="@font/aclonica"
+                android:layout_above="@id/email_layout"
+                android:layout_marginBottom="25dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="29sp"
+                android:textColor="#FC0008"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
